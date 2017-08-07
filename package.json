@@ -1,12 +1,12 @@
 {
   "name": "@vonage/acl-express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An access control middleware for Express",
   "main": "lib/index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha test/**/*.js",
     "test-coverage": "NODE_ENV=test istanbul cover _mocha test/**/*.js",
-		"lint": "eslint"
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
