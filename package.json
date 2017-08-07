@@ -1,0 +1,36 @@
+{
+  "name": "acl-express",
+  "version": "0.0.1",
+  "description": "An access control middleware for Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha test/**/*.js",
+    "test-coverage": "NODE_ENV=test istanbul cover _mocha test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Tomer Amir",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^2.6.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "chai": "^4.1.1",
+    "eslint": "^4.4.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^3.5.0",
+    "sinon": "^3.0.0"
+  }
+}
