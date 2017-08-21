@@ -31,9 +31,9 @@ Property | Required | Type | Description
 Example:
 ```js
 acl.config({
-	path: 'path/to/rule/list',
-	roleObjectKey: 'myUser',
-	defaultRole: 'guest'
+  path: 'path/to/rule/list',
+  roleObjectKey: 'myUser',
+  defaultRole: 'guest'
 });
 ```
 
@@ -46,27 +46,27 @@ You have to supply a rule file to the module which is built in the following way
 **Basic Example**:
 ```json
 {
-	"guest": [
-  		{
-  			"route": "/public",
-  			"methods": [
-  				"GET"
-  			],
-  			"action": "allow"
-  		},
-  		{
-				"route": "/private",
-				"methods": "*",
-				"action": "deny"
-			}
-  	],
-  	"admin": [
-  		{
-  			"route": "*",
-  			"methods": "*",
-  			"action": "allow"
-  		}
-  	]
+  "guest": [
+      {
+        "route": "/public",
+        "methods": [
+          "GET"
+        ],
+        "action": "allow"
+      },
+      {
+        "route": "/private",
+        "methods": "*",
+        "action": "deny"
+      }
+    ],
+    "admin": [
+      {
+        "route": "*",
+        "methods": "*",
+        "action": "allow"
+      }
+    ]
 }
 ```
 
@@ -88,25 +88,25 @@ Every rule can have another field which is called `subroutes`. this is another a
 **Example**:
 ```js
 {
-	"guest": [
-		{
-			"path": "/api",
-			"method": "*",
-			"action": "allow",
-			"subroutes": [
-				{
-					"path": "/public", // Translates to /api/public
-					"method": ["GET"],
-					"action": "allow"
-				},
-				{
-					"path": "/private", // Translates to /api/private
-					"method": "*",
-					"action": "deny"
-				}
-			]
-		}
-	]
+  "guest": [
+    {
+      "path": "/api",
+      "method": "*",
+      "action": "allow",
+      "subroutes": [
+        {
+          "path": "/public", // Translates to /api/public
+          "method": ["GET"],
+          "action": "allow"
+        },
+        {
+          "path": "/private", // Translates to /api/private
+          "method": "*",
+          "action": "deny"
+        }
+      ]
+    }
+  ]
 }
 ``` 
 
