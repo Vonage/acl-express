@@ -86,7 +86,7 @@ You can use the Express styled url parameters in your path, i.e.: `/path/with/:p
 ### Sub-routes
 Every rule can have another field which is called `subroutes`. this is another array of rules which will allow you a more granular control over which routes to allow and deny access to according to your logic.<br/>
 **Example**:
-```json
+```js
 {
 	"guest": [
 		{
