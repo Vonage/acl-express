@@ -1,0 +1,71 @@
+{
+	"guest": [
+		{
+			"route": "/test",
+			"methods": "*",
+			"action": "allow"
+		}
+	],
+	"admin": [
+		{
+			"route": "*",
+			"methods": "*",
+			"action": "allow"
+		}
+	],
+	"user": [
+		{
+			"route": "/test",
+			"methods": [
+				"GET"
+			],
+			"action": "allow",
+			"subroutes": [
+				{
+					"route": "/test2",
+					"methods": [
+						"GET"
+					],
+					"action": "allow"
+				},
+				{
+					"route": "/star",
+					"methods": [
+						"GET"
+					],
+					"action": "allow",
+					"subroutes": [
+						{
+							"route": "*",
+							"methods": [
+								"GET"
+							],
+							"action": "allow"
+						}
+					]
+				}
+			]
+		},
+		{
+			"route": "/param/:test",
+			"methods": [
+				"GET"
+			],
+			"action": "allow",
+			"subroutes": [
+				{
+					"route": "*",
+					"methods": [
+						"GET"
+					],
+					"action": "allow"
+				}
+			]
+		},
+		{
+			"route": "/deny",
+			"methods": "*",
+			"action": "deny"
+		}
+	]
+}
