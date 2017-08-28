@@ -74,12 +74,9 @@ describe('Test ACL', function() {
 
 		beforeEach(function() {
 			next = sinon.spy();
-		});
-
-		beforeEach(function() {
 			acl = require('../../lib');
 			acl.config({
-				path: 'test/resources/rules.json',
+				path: 'test/resources/rules.json'
 			});
 		});
 
