@@ -1,6 +1,6 @@
 {
   "name": "@vonage/acl-express",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An access control middleware for Express",
   "main": "lib/index.js",
   "scripts": {
