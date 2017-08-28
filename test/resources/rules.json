@@ -43,6 +43,22 @@
 							"action": "allow"
 						}
 					]
+				},
+				{
+					"route": "/mid/*",
+					"methods": [
+						"GET"
+					],
+					"action": "allow",
+					"subroutes": [
+						{
+							"route": "star",
+							"methods": [
+								"GET"
+							],
+							"action": "allow"
+						}
+					]
 				}
 			]
 		},

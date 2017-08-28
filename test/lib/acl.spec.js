@@ -123,6 +123,12 @@ describe('Test ACL', function() {
 			expect(next.args[0]).to.deep.equal([]);
 		});
 
+		it('Should succeed - route has * in middle', function() {
+			acl.authorize({ method: 'GET', originalUrl: '/test/mid/star', user: { role: 'user' } }, { }, next);
+
+			expect(next.args[0]).to.deep.equal([]);
+		});
+
 		it('Should succeed - default role', function() {
 			acl.config({
 				path: 'test/resources/rules.json',
